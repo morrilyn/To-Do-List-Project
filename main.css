@@ -109,6 +109,9 @@ main {
 	border-radius: 1rem;
 	margin-bottom: 1rem;
 }
+#tasks .task .content {
+    flex: 1 1 0%;
+}
 /* font size to text in list of tasks and colour */
 #tasks .task .content .text {
     color: var(--light);
@@ -154,5 +157,5 @@ main {
 /* crimson colour of the delete button */
 .task .actions .delete {
     color: crimson;
-    
+
 }
