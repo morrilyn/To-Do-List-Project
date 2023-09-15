@@ -7,7 +7,9 @@
     --pink: #ec4899;
     --purple: #8b5cf6;
 
- box-sizing: border-box;
+ 
+}
+* {box-sizing: border-box;
  margin: 0;
  font-family: 'fira sans', sans-serif';
 }
@@ -59,7 +61,7 @@ input, button {
 #new-task-input::placeholder {
     color: var(--pink);
 }
-
+/* this is the add task button */
 #new-task-submit {
     color: var(--pink);
     font-size: 1.25rem;
@@ -87,7 +89,7 @@ main {
 	width: 100%;
 	margin: 0 auto;
 }
-
+/* this positions list fof tasks */
 .task-list {
 	padding: 1rem;
 }
@@ -95,10 +97,10 @@ main {
 .task-list h2 {
 	font-size: 1.5rem;
 	font-weight: 300;
-	color: var(--grey);
+	color: var(--gray);
 	margin-bottom: 1rem;
 }
-
+/* edit and delete button to the right & background & border radius  */
 #tasks .task {
 	display: flex;
 	justify-content: space-between;
@@ -107,35 +109,32 @@ main {
 	border-radius: 1rem;
 	margin-bottom: 1rem;
 }
-
-.task .content {
-	flex: 1 1 0%;
+/* font size to text in list of tasks and colour */
+#tasks .task .content .text {
+    color: var(--light);
+    font-size: 1.25rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
 }
 
-.task .content .text {
-	color: var(--light);
-	font-size: 1.125rem;
-	width: 100%;
-	display: block;
-	transition: 0.4s;
+#task .task .content .text:not(:read-only) {
+    color: var(--pink);
 }
 
-.task .content .text:not(:read-only) {
-	color: var(--pink);
-}
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
 
-.task .actions {
-	display: flex;
-	margin: 0 -0.5rem;
 }
 
 .task .actions button {
-	cursor: pointer;
-	margin: 0 0.5rem;
-	font-size: 1.125rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	transition: 0.4s;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
 }
 
 .task .actions button:hover {
@@ -145,13 +144,15 @@ main {
 .task .actions button:active {
 	opacity: 0.6;
 }
-
+/* gradiet colour of the edit button */
 .task .actions .edit {
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--pink),
+    var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
+/* crimson colour of the delete button */
 .task .actions .delete {
-	color: crimson;
+    color: crimson;
+    
 }
